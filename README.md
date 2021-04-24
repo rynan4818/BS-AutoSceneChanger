@@ -9,27 +9,45 @@ BeatSaberでXSplit Broadcasterのシーン自動切り替えをする拡張プ�
 
 ## インストール方法
 
- 1. 本ツールの[リリースページ](https://github.com/rynan4818/BS-AutoSceneChanger/releases)から最新リリースをダウンロードします。
+ 1. HTTP Statusのインストール (インストール済みの人は2.へ)
 
- 2. BS-AutoSceneChanger*.zipを適当なフォルダに解凍します。例：C:\TOOL\BS-AutoSceneChanger
+    Beat Saberから本ツールにデータを送信するためにHTTP Statusをインストールしてください。
 
- 3. XSplit Broadcasterを起動してメニューの`拡張`の`拡張の追加`から`拡張ファイルを追加`を選択します。
+    デンパ時計さんの[HttpSiraStatus](https://github.com/denpadokei/beatsaber-http-status) 及び、[HttpStatusExtention](https://github.com/denpadokei/HttpStatusExtention)にも対応してます。
+
+    ModAssistantを使用する場合は依存modが自動的にインストールされるため簡単です。
+
+    [Beat Saber HTTP Status](https://github.com/opl-/beatsaber-http-status)
+
+    ![image](https://rynan4818.github.io/beatsaber-overlay-httpstatus.png)
+	
+    もし、BeatSaberのバージョンアップ直後などでModAssistantに登録が無い時は、手動でインストールが必要です。
+
+    その場合は、ModAssistantにある**websocket-sharpのインストールが必須**です。入れ忘れトラブルが多いので注意して下さい。
+
+    ![image](https://rynan4818.github.io/beatsaber-overlay-websocket-sharp.png)
+
+ 2. 本ツールの[リリースページ](https://github.com/rynan4818/BS-AutoSceneChanger/releases)から最新リリースをダウンロードします。
+
+ 3. BS-AutoSceneChanger*.zipを適当なフォルダに解凍します。例：C:\TOOL\BS-AutoSceneChanger
+
+ 4. XSplit Broadcasterを起動してメニューの`拡張`の`拡張の追加`から`拡張ファイルを追加`を選択します。
 
     ![preview](https://rynan4818.github.io/bs_auto_scene_changer1.png)
 
- 4. 警告画面が出ますので、内容をよく読んで問題なければＯＫを押して下さい。
+ 5. 警告画面が出ますので、内容をよく読んで問題なければＯＫを押して下さい。
 
     ![preview](https://rynan4818.github.io/bs_auto_scene_changer2.png)
 
- 5. `参照`ボタンを押して、ファイル選択画面を開きます。
+ 6. `参照`ボタンを押して、ファイル選択画面を開きます。
 
     ![preview](https://rynan4818.github.io/bs_auto_scene_changer3.png)
 
- 6. 2.で解凍したフォルダの`BS-AutoSceneChanger.html`を選択して開きます。
+ 7. 2.で解凍したフォルダの`BS-AutoSceneChanger.html`を選択して開きます。
 
     ![preview](https://rynan4818.github.io/bs_auto_scene_changer4.png)
 
- 7. URLに選択したファイルが入力されたら、ＯＫを押して追加します。
+ 8. URLに選択したファイルが入力されたら、ＯＫを押して追加します。
 
     ![preview](https://rynan4818.github.io/bs_auto_scene_changer5.png)
 
