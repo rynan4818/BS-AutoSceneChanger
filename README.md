@@ -105,6 +105,14 @@ BeatSaberでXSplit Broadcasterのシーン自動切り替えをする拡張プ�
 
         HTTP Statusのポート番号が異なる場合にチェックして使用します。通常は使用しません。
 
+    - Save setting
+
+        設定を保存します。
+
+## トラブルシューティング
+
+XSplit Broadcasterをバージョンアップして動作しなくなった場合は、最新のxjs.jsを[XSplit JS Framework](https://xjsframework.github.io/)からダウンロードして差し替えると動作すると思います。
+
 ## ライセンス
 
 本ツールのライセンスは[MITライセンス](https://github.com/rynan4818/BS-AutoSceneChanger/blob/main/LICENSE)を適用します
