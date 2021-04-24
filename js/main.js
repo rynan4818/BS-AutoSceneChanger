@@ -68,7 +68,6 @@ function start_scene_change() {
 
 function menu_scene_change() {
   dom_messages.innerHTML = 'Menu scene';
-  console.log(dom_select_menu.value);
   scene_change(dom_select_menu.value);
 }
 
@@ -148,6 +147,14 @@ const events = {
   },
   resume(data) {
     end_event = '';
+  },
+  hello(data) {
+    end_event = '';
+    if (data.status.beatmap && data.status.performance) {
+        game_scene_change();
+    } else {
+        menu_scene_change();
+    }
   }
 }
 
