@@ -1,0 +1,50 @@
+<!--
+==============================================================================
+Project Name    : BS-AutoSceneChanger
+Creation Date   : 2021/04/24
+Copyright       : (c) 2021 rynan4818 (Twitter @rynan4818)
+License         : MIT License
+                  https://github.com/rynan4818/BS-AutoSceneChanger/blob/main/LICENSE
+Library         : XSplit JS Framework version: 2.10.2
+                  https://xjsframework.github.io/
+                  https://github.com/SplitmediaLabsLimited/xjs/blob/master/LICENSE
+==============================================================================
+-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>BeatSaber auto scene changer</title>
+    </head>
+    <body style="color: white; background-color: black;">
+        <p>BeatSaber auto scene changer</p>
+        <p id="messages">HTTP Status DISCONNECT!</p>
+        <table>
+            <tr><td>Menu scene</td><td><select id="select_menu" name="menu_scene"></select></td></tr>
+            <tr><td>Game scene</td><td><select id="select_game" name="game_scene"></select></td></tr>
+            <tr><td><input type="checkbox" id="check_start" name="enable" value="start">Start scene</td>
+                <td><select id="select_start" name="start_scene" disabled></select></td>
+                <td><input type="text" id="text_start" name="start_time" size="3" maxlength="5" value="0" disabled> sec</td></tr>
+            <tr><td><input type="checkbox" id="check_finish" name="enable" value="finish">Finish end scene</td>
+                <td><select id="select_finish" name="finish_scene" disabled></select></td>
+                <td><input type="text" id="text_finish" name="finish_time" size="3" maxlength="5" value="0" disabled> sec</td></tr>
+            <tr><td><input type="checkbox" id="check_fail" name="enable" value="fail">Fail end scene</td>
+                <td><select id="select_fail" name="fail_scene" disabled></select></td>
+                <td><input type="text" id="text_fail" name="fail_time" size="3" maxlength="5" value="0" disabled> sec</td></tr>
+            <tr><td><input type="checkbox" id="check_pause" name="enable" value="pause">Pause end scene</td>
+                <td><select id="select_pause" name="pause_scene" disabled></select></td>
+                <td><input type="text" id="text_pause" name="pause_time" size="3" maxlength="5" value="0" disabled> sec</td></tr>
+            <tr><td colspan="2"><input type="checkbox" id="check_game_delay" name="enable" value="game_delay">Game event delay.</td>
+                <td colspan="2"><input type="text" id="text_game_delay" name="game_delay" size="3" maxlength="5" value="0" disabled> msec</td></tr>
+            <tr><td colspan="2"><input type="checkbox" id="check_menu_delay" name="enable" value="menu_delay">Menu event delay.</td>
+                <td colspan="2"><input type="text" id="text_menu_delay" name="menu_delay" size="3" maxlength="5" value="0" disabled> msec</td></tr>
+            <tr><td colspan="4"><input type="checkbox" id="check_menu_switch" name="enable" value="menu_switch">Menu scene switching at finish/fail timing</td></tr>
+            <tr><td colspan="2"><input type="checkbox" id="check_host_address" name="enable" value="host_address">HTTP Statsu host address</td>
+                <td colspan="2"><input type="text" id="text_host_address" name="host_address" size="12" maxlength="50" value="localhost" disabled></td></tr>
+            <tr><td colspan="2"><input type="checkbox" id="check_host_port" name="enable" value="host_port">HTTP Statsu host port</td>
+                <td colspan="2"><input type="text" id="text_host_port" name="host_port" size="6" maxlength="5" value="6557" disabled></td></tr>
+            <tr><td colspan="4"><button id="button_save">Save setting</button></td></tr>
+            </table>
+        <script src="js/xjs.js"></script>
+        <script src="js/main.js"></script>
+    </body>
+</html>
