@@ -40,6 +40,7 @@ let now_scene;
 let bs_menu_flag = true;
 let setting;
 let end_event = '';
+let timeout_id;
 
 function scene_change(id) {
   if (id != now_scene) {
@@ -60,7 +61,7 @@ function start_scene_change() {
   if (dom_check_start.checked && start_scene_duration > 0) {
     dom_messages.innerHTML = 'Start scene';
     scene_change(dom_select_start.value);
-    setTimeout(game_scene_change, start_scene_duration * 1000);
+    timeout_id = setTimeout(game_scene_change, start_scene_duration * 1000);
   } else {
     game_scene_change();
   }
@@ -100,7 +101,7 @@ function end_scene_change() {
       }
   }
   if (end_scene_flag && end_scene_duration > 0) {
-    setTimeout(menu_scene_change, end_scene_duration * 1000);
+    timeout_id = setTimeout(menu_scene_change, end_scene_duration * 1000);
   } else {
     menu_scene_change();
   }
@@ -108,9 +109,10 @@ function end_scene_change() {
 
 function menu_event() {
   if (!bs_menu_flag) {
+    clearTimeout(timeout_id);
     let menu_delay = parseInt(dom_text_menu_delay.value);
     if (dom_check_menu_delay.checked && menu_delay > 0) {
-      setTimeout(end_scene_change, menu_delay);
+      timeout_id = setTimeout(end_scene_change, menu_delay);
     } else {
       end_scene_change();
     }
@@ -122,9 +124,10 @@ const events = {
   songStart(data) {
     end_event = '';
     if (bs_menu_flag) {
+      clearTimeout(timeout_id);
       let game_delay = parseInt(dom_text_game_delay.value);
       if (dom_check_game_delay.checked && game_delay > 0) {
-        setTimeout(start_scene_change, game_delay);
+        timeout_id = setTimeout(start_scene_change, game_delay);
       } else {
         start_scene_change();
       }
